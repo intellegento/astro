@@ -1,7 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import astroIcon from "../assets/astro-icon.png";
 ---
 
-<Layout title="Astro.">
-<h1>Astro</h1>
+<Layout title="About">
+    <h1>Magic</h1>
+    <Image
+    src={astroIcon}
+    alt="Astro image"
+    format="avif"
+    width={500}
+    transition:name="img"
+  />
 </Layout>
