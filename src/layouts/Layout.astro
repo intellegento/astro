@@ -22,26 +22,23 @@ const { title } = Astro.props;
     <ViewTransitions />
   </head>
   <body
-    class="bg-theme-base text-theme-900"
     transition:animate={fade({ duration: "0.4s" })}
   >
-    <nav class="flex items-center justify-center gap-4 p-2" transition:persist>
+    <nav >
       <a
-        class="w-8 h-8 grid place-items-center rounded hover:bg-theme-200"
         aria-label="Go Home"
         href="/"
       >
-        <!-- <Icon name="bx:bxs-home" class="w-4 h-4 text-theme-800" /> -->
+       home
       </a>
-      <button
-        class="w-8 h-8 grid place-items-center rounded hover:bg-theme-200"
+      <!-- <button
         data-theme-toggle
         aria-label="toggle theme"
-      >
+      > -->
         <!-- <Icon name="bx:bxs-sun" class="w-4 h-4 text-theme-800" /> -->
       </button>
     </nav>
-    <div transition:animate="slide">
+    <div transition:animate={fade({ duration: ".4s" })}>
       <slot />
     </div>
     <script>
